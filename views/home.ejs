@@ -1,0 +1,13 @@
+<%- include('parcials/header.ejs') -%>
+<h1>Home</h1>
+
+<p><%= home %></p>
+<%posts.forEach(function(element){%>
+<h1>  <%= element.name%></h1>
+ <p>  <%= element.para.substring(0,100)+"..."%>
+ <a href="/posts/<%= element._id%>">More</a></p>
+ <%});%>
+
+
+
+<%- include('parcials/footer.ejs') -%>
